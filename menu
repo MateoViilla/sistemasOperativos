@@ -1,0 +1,22 @@
+while true 
+do
+   clean
+    echo "1. Copiar archivo"
+    echo "2. Clear directorio"
+    echo "3. Borrar directorio"
+    echo "4. Borrar archivo"
+    echo "9. Salir"
+    
+    read opcion
+    
+    case $opcion in 
+        1) sh prog1;;
+        2) sh prog2;;
+        3) sh prog3;;
+        4) sh prog4;;
+        9) exit;;
+        *) echo "Opción inválida, presione Enter para continuar"; read q;;
+
+    esac 
+done 
+

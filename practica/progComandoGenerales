@@ -1,0 +1,29 @@
+# Menú comandos generales progComandosGenerales
+while true 
+do
+   clean
+    echo "Comandos generales "
+    echo ""
+    echo "1. Fecha."
+    echo "2. Usuarios conectados."
+    echo "3. Modificar password."
+    echo "4. Disco libre del sistema de archivos."
+    echo "5. Disco utilizado."
+    echo "6. Listar contenido de la carpeta actual."
+    echo "9. Terminar."
+    
+    read opcion
+    
+    case $opcion in 
+        1) sh ./pathComandosGenerales/progFecha;;
+        2) sh ./pathComandosGenerales/progUsariosConectados;;
+        3) sh ./pathComandosGenerales/progModificarPassword;;
+        4) sh ./pathComandosGenerales/progDiscoLibre;;
+        5) sh ./pathComandosGenerales/progDiscoEnUso;;
+        6) sh ./pathComandosGenerales/progCarpetaActual;;
+        9) exit;;
+        *) echo "Opción inválida, presione Enter para continuar"; read q;;
+
+    esac 
+done 
+

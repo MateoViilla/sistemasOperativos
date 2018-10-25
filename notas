@@ -1,0 +1,154 @@
+while true
+do 
+   clean
+    echo "1. Copiar archivo"
+    echo "2. Clear directorio"
+    echo "3. Borrar directorio"
+    echo "4. Borrar archivo"
+    echo "9. Salir"
+    
+    read opcion
+    
+    case $opcion in 
+        1) sh copiarArchivo;;
+        2) sh eliminarDirectorio;;
+        3) sh borrarDirectorio;;
+        4) sh borrarArchivo;;
+        9) exit;;
+        *) echo "Opción inválida, presione Enter para continuar"; read q;;
+
+    esac 
+done 
+
+
+echo "Archivo copiado"
+echo "Directorio creado"
+echo "Directorio borrado"
+echo "Archivo borrado"
+
+
+#Copiar archivo 
+
+echo "Ingrese nombre del archivo a copiar"
+read nombreArchivo
+
+if test -f $nombreArchivo
+then 
+    echo "Ingrese nombre del nuevo archivo"
+    read nombreNuevoArchivo
+
+    if test -f $nombreNuevoArchivo
+    then 
+        echo "Ya existe un archivo con este nombre, desea sobreescribirlo ?"
+        echo "Presione 0 = SI o 1 = NO"
+        read opcion
+        
+        if test $opcion eq 0
+        then
+            cp $nombreArchivo $nombreNuevoArchivo
+            echo "Archivo copiado con nombre" $nombreNuevoArchivo
+            exit
+
+        else
+        then 
+            echo "Programa terminado"
+            exit
+        fi
+    else    
+    then 
+        cp $nombreArchivo $nombreNuevoArchivo
+        echo "Archivo copiado con nombre" $nombreNuevoArchivo
+        exit
+    fi 
+else 
+then 
+    echo "El archivo "$nombreArchivo " no existe"
+fi 
+echo "Programa terminado"
+
+
+#crear un directorio 
+
+echo "Ingrese nombre del directorio a crear"
+read nombreDirectorio
+
+if test -f $nombreDirectorio
+then 
+    echo "Ya existe un directorio con este nombre, desea reemplazarlo ?"
+    echo "Presione 0 = SI o 1 = NO"
+    read opcion
+        
+    if test $opcion eq 0
+    then
+        mkdir $nombreDirectorio
+        echo "Directorio creado con nombre" $nombreDirectorio
+
+    else
+    then 
+        echo "Programa terminado"
+        exit
+ 
+   fi
+
+else
+then 
+    mkdir $nombreDirectorio
+    echo "Directorio creado con nombre" $nombreDirectorio
+fi 
+echo "Programa terminado"
+
+
+#Eliminar un directorio 
+
+echo "Ingrese nombre del directorio a eliminar"
+read nombreDirectorio
+
+if test -f $nombreDirectorio
+then 
+    rm -rf $nombreDirectorio
+    echo "Directorio "$nombreDirectorio "eliminado con exito "  
+
+else
+then 
+    echo "Directorio " $nombreDirectorio " no existe "
+fi 
+echo "Programa terminado"
+
+
+#Eliminar un archivo 
+
+echo "Ingrese nombre del archivo a eliminar"
+read nombreArchivo
+
+if test -f $nombreArchivo
+then 
+    rm $nombreArchivo
+    echo "Archivo "$nombreArchivo "eliminado con exito "  
+
+else
+then 
+    echo "Archivo " $nombreArchivo " no existe "
+fi 
+echo "Programa terminado"
+
+
+
+# Permisos en los archivos 
+
+chmod   a  | + |  r  |  archivo 
+        u  | - |  w  |
+        o  | = |  x  |
+
+el archivo .profile es el archivo que se ejecuta apenas se inicia sesion 
+
+ls -l > a guarda el resultado en a 
+ls -l >> a si el archivo no exite lo crea, sino existe le adiciona la lista al final de a 
+
+grep expresion archivo muestra las lienas del archivo que contienen esa expresion 
+grep -v echo prac
+
+wc [-lwc] archivo # cuenta 
+diff ar1 ar2 lineas direrentes 
+comm ar1 ar2 lineas comunes 
+uniq ar1 elimina las lineas repetidas 
+find / -name nombre -print 

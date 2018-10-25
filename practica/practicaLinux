@@ -1,0 +1,24 @@
+clear
+# Menú principal 
+while true 
+do
+   clean
+    echo "Practica sistemas Operativos Mateo Villa."
+    echo "Menú."
+    echo ""
+    echo "1. Comandos generales."
+    echo "2. Usuario."
+    echo "3. Sistema de archivos."
+    echo "9. Terminar."
+    
+    read opcion
+    
+    case $opcion in 
+        1) sh progComandoGenerales;;
+        2) sh progUsuario;;
+        3) sh progSistemaArchivo;;
+        9) exit;;
+        *) echo "Opción inválida, presione Enter para continuar"; read q;;
+
+    esac 
+done 
