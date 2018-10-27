@@ -1,1 +1,5 @@
- 
+echo "Buscar usuario "
+echo "Ingrese nombre del usuario a buscar"
+read usuario
+
+id $usuario
