@@ -1,0 +1,7 @@
+a = 123
+b = 123
+
+if [ "$a" -eq "$b"]; then 
+    echo "equal";
+fi 
+

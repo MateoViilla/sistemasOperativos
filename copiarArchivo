@@ -13,7 +13,8 @@ then
         echo "Ya existe un archivo con este nombre, desea sobreescribirlo ?"
         echo "Presione 0 = SI o 1 = NO"
         read opcion
-        if test "$opcion" eq "0"
+        echo $opcion
+        if test "0" -eq "$opcion";
         then
             cp $nombreArchivo $nombreNuevoArchivo
             echo "Archivo copiado con nombre" $nombreNuevoArchivo
