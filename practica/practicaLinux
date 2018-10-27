@@ -7,7 +7,7 @@ do
     echo "Menú."
     echo ""
     echo "1. Comandos generales."
-    echo "2. Usuario."
+    echo "2. Usuarios."
     echo "3. Sistema de archivos."
     echo "9. Terminar."
     
