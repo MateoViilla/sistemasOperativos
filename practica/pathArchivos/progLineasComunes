@@ -1,0 +1,26 @@
+# Líneas comunes entre archivos 
+
+echo "Líneas comunes entre archivos."
+echo "Ingrese nombre archivo 1."
+read archivo1
+
+
+if test -f $archivo1 
+then 
+    echo "Ingrese nombre archivo 2."
+    read archivo2
+    if test -f $archivo2
+    then 
+        echo "Líneas comunes"
+        echo "-------------"
+        comm -12 $archivo1 $archivo2
+        echo "-------------"
+    else 
+        echo "El archivo '"$archivo2"' no existe"
+        
+    fi 
+else 
+    echo "El archivo '"$archivo1"' no existe"
+fi 
+
+echo "Programa terminado"

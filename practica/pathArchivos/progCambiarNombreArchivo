@@ -1,0 +1,44 @@
+ 
+#Cambiar nombre a un archivo 
+clear
+ls
+echo "Cambiar nombre a un archivo"
+echo "Nombre archivo: "
+read nombreArchivo
+
+if test -f $nombreArchivo
+then 
+    echo "Ingrese nuevo nombre: "
+    read nombreNuevoArchivo
+
+    if test -f $nombreNuevoArchivo
+    then 
+        echo "Ya existe un archivo con este nombre, desea sobreescribirlo ?"
+        echo "Presione 0 = SI o 1 = NO"
+        read opcion
+        echo $opcion
+        if test "0" -eq "$opcion";
+        then
+            mv $nombreArchivo $nombreNuevoArchivo
+            echo "Archivo reescrito con nombre" $nombreNuevoArchivo
+            exit
+
+        else
+        
+            echo "Programa terminado"
+            exit
+        fi
+    else    
+     
+        mv $nombreArchivo $nombreNuevoArchivo
+        echo "Archivo reescrito con nombre" $nombreNuevoArchivo
+        exit
+    fi 
+else 
+
+    echo "El archivo "$nombreArchivo " no existe"
+fi 
+echo "Programa terminado"
+
+
+ 

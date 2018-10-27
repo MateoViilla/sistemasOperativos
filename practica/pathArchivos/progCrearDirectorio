@@ -1,0 +1,29 @@
+ 
+#Crear un directorio
+echo "Crear un directorio. "
+echo "Nombre nuevo directorio."
+read nombreDirectorio
+
+if test -d $nombreDirectorio
+then 
+    echo "El directorio '"  $nombreDirectorio "' ya existe. ¿Desea sobreescribirlo?."
+    echo "Presione 0 = SI o 1 = NO."
+        read opcion
+        echo $opcion
+        if test "0" -eq "$opcion";
+        then
+            rm -rf $nombreDirectorio
+            mkdir $nombreDirectorio
+            echo "Directorio creado."
+        else
+            echo "Programa terminado."
+            exit
+        fi
+else 
+    mkdir $nombreDirectorio
+    echo "Directorio creado. "
+fi 
+echo "Programa terminado."
+
+
+ 

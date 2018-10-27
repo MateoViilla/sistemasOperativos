@@ -2,7 +2,7 @@ clear
 # Menú principal 
 while true 
 do
-   clean
+  
     echo "Practica sistemas Operativos Mateo Villa."
     echo "Menú."
     echo ""

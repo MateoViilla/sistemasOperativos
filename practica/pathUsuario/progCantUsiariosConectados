@@ -1,0 +1,4 @@
+echo "Cantidad usuario conectados"
+echo "------"
+who | wc -l  
+echo "------"

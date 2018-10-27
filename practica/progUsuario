@@ -1,0 +1,22 @@
+# Menú Usuarios progUsuario
+while true 
+do
+    echo "Usuarios"
+    echo ""
+    echo "1. Buscar un usario conectado."
+    echo "2. Número de usuarios conectados."
+    echo "3. Enviar un mensaje."
+    echo "9. Terminar."
+    
+    read opcion
+    
+    case $opcion in 
+        1) sh ./pathUsuario/progBuscarUsuario;;
+        2) sh ./pathUsuario/progCantUsiariosConectados;;
+        3) sh ./pathUsuario/progEnviarMensaje;;
+        9) exit;;
+        *) echo "Opción inválida, presione Enter para continuar"; read q;;
+
+    esac 
+done 
+

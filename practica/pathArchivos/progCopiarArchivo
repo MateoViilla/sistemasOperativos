@@ -1,0 +1,41 @@
+#Copiar archivo 
+
+echo "Ingrese nombre del archivo a copiar"
+read nombreArchivo
+
+if test -f $nombreArchivo
+then 
+    echo "Ingrese nombre del nuevo archivo"
+    read nombreNuevoArchivo
+
+    if test -f $nombreNuevoArchivo
+    then 
+        echo "Ya existe un archivo con este nombre, desea sobreescribirlo ?"
+        echo "Presione 0 = SI o 1 = NO"
+        read opcion
+        echo $opcion
+        if test "0" -eq "$opcion";
+        then
+            cp $nombreArchivo $nombreNuevoArchivo
+            echo "Archivo copiado con nombre" $nombreNuevoArchivo
+            exit
+
+        else
+        
+            echo "Programa terminado"
+            exit
+        fi
+    else    
+     
+        cp $nombreArchivo $nombreNuevoArchivo
+        echo "Archivo copiado con nombre" $nombreNuevoArchivo
+        exit
+    fi 
+else 
+
+    echo "El archivo "$nombreArchivo " no existe"
+fi 
+echo "Programa terminado"
+
+
+ 

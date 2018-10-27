@@ -1,0 +1,31 @@
+ 
+# Menú sistema archivos 
+while true 
+do
+    echo "Sistema de archivos."
+    echo ""
+    echo "1. Copiar un archivo."
+    echo "2. Cambiar nombre a un archivo."
+    echo "3. Crear directorio."
+    echo "4. Borrar un directorio."
+    echo "5. Modificar permisos a un archivo."
+    echo "6. Mostrar las líneas comunes entre dos archivos."
+    echo "7. Mostrar las líneas diferentes entre dos archivos."
+    echo "9. Terminar."
+    
+    read opcion
+    
+    case $opcion in 
+        1) sh ./pathArchivos/progCopiarArchivo;;
+        2) sh ./pathArchivos/progCambiarNombreArchivo;;
+        3) sh ./pathArchivos/progCrearDirectorio;;
+        3) sh ./pathArchivos/progBorrarDirectorio;;
+        3) sh ./pathArchivos/progPermisosArchivo;;
+        3) sh ./pathArchivos/progLineasComunes;;
+        3) sh ./pathArchivos/progLineasDiferentes;;
+        9) exit;;
+        *) echo "Opción inválida, presione Enter para continuar"; read q;;
+
+    esac 
+done 
+

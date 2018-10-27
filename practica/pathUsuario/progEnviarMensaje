@@ -1,0 +1,5 @@
+echo "Enviar mensaje: Ctrl + C para salir "
+echo "Destinatario: "
+read destinatario
+echo "Mensaje"
+write $destinatario

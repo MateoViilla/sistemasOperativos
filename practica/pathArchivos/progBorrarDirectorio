@@ -1,0 +1,18 @@
+#Borrar directorio 
+
+echo "Ingrese nombre del directorio a eliminar"
+read nombreDirectorio
+
+if test -d $nombreDirectorio
+then 
+    echo "Directorio '" $nombreDirectorio "' Eliminado"
+    rm -rf $nombreDirectorio
+else 
+
+    echo "El directorio '"$nombreDirectorio "' no existe"
+fi 
+echo "Programa terminado"
+
+
+ 
+ 

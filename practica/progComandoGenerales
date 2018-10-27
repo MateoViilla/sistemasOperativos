@@ -1,7 +1,6 @@
 # Menú comandos generales progComandosGenerales
 while true 
 do
-   clean
     echo "Comandos generales "
     echo ""
     echo "1. Fecha."

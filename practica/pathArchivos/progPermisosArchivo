@@ -1,0 +1,18 @@
+# Permisos de un archivo
+
+echo "Permisos de un archivo."
+echo "Ingrese nombre archivo."
+read archivo
+
+if test -f $archivo
+then 
+    echo "Permisos"
+    echo "-------------"
+    ls -l $archivo
+    echo "-------------"
+
+else 
+    echo "El archivo "$archivo" no existe"
+fi 
+echo "Programa terminado. "
+
