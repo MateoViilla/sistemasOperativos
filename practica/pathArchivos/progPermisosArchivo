@@ -6,11 +6,18 @@ read archivo
 
 if test -f $archivo
 then 
-    echo "Permisos"
-    echo "-------------"
+    echo "¿Qué desea hacer?."
+    echo "Ingrese '-' para remover, ó '+' para asignar"
+    read operacion
+    echo "¿Qué permiso desea modificar?."
+    echo "x = ejecución, r = lectura, w = escritura"
+    read permiso
+    echo "¿A quién desea aplicar este cambio?."
+    echo "u = usuario, o = otros usuarios, g = grupo de usuarios"
+    read usuario
+    chmod $usuario$operacion$permiso $archivo
+    echo "Permisos archivo"
     ls -l $archivo
-    echo "-------------"
-
 else 
     echo "El archivo "$archivo" no existe"
 fi 
